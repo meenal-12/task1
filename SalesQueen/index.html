@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYrxRIvCOt6PEnaoAjZXO5sQDdNAKWw1M&libraries=places"></script>
+
+    <script>
+    
+      google.maps.event.addDomListener(window, 'load', initialize);
+    
+        function initialize() {
+    
+          var input = document.getElementById('Pickup');
+    
+          var autocomplete = new google.maps.places.Autocomplete(input);
+    
+          autocomplete.addListener('place_changed', function () {
+    
+          var place = autocomplete.getPlace();
+    
+          // place variable will have all the information you are looking for.
+    
+          $('#lat').val(place.geometry['location'].lat());
+    
+          $('#long').val(place.geometry['location'].lng());
+    
+        });
+        var input = document.getElementById('Drop');
+    
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        autocomplete.addListener('place_changed', function () {
+
+        var place = autocomplete.getPlace();
+
+    // place variable will have all the information you are looking for.
+
+        $('#lat').val(place.geometry['location'].lat());
+
+        $('#long').val(place.geometry['location'].lng());
+
+  });
+    
+      }
+    
+    </script>
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend>Book Your One Way Taxi</legend>
+<label for="Pickup">Pickup Location</label>
+<input type="text" name="field1" id="Pickup" placeholder="Pickup Location">
+
+
+<label for="Drop">Drop Location</label>
+<input type="text" name="field2" id="Drop" placeholder="Drop Location">
+
+<div class="first">
+ <div class="child1"><label for="name">Full Name</label>
+<input type="text" name="field2" id="name" placeholder="Full Name">
+</div>
+<div class="child2">
+<label for="number">Mobile Number</label>
+<input type="text" name="field2" id="name" placeholder="Mobile Number">
+</div>
+</div>
+
+<label for="email">Email(Optional)</label>
+<input type="email" id="email" name="email" placeholder="Email">
+
+<div class="second">
+
+<div class="child3">
+<label for="date">Pickup Date</label>
+<input type="date" id="date" name="date" placeholder="date">
+</div>
+<div class="child4">
+<label for="appt">Pickup Time</label>
+<input type="time" id="appt" name="appt" placeholder="time">
+</div>
+</div>
+<div _ngcontent-xxg-c131="" class="carbox">
+ <div _ngcontent-xxg-c131="" class="col-ng-star-inserted">
+    <div _ngcontent-xxg-c131="" class="cars-item">
+        <label _ngcontent-xxg-c131="" class="ng-star-inserted">13 ₹ / Km</label>
+        <!----><!----><img _ngcontent-xxg-c131="" src="https://images.ctfassets.net/509kpi6dw56l/6QdZLGkGnMv0F8fDwFMGlE/1b85e10c7d90fdac89a4794938a43780/prime-play-1.png?h=250" class="img-ng-star-inserted">
+        <!----><!----><label _ngcontent-xxg-c131="">SEDAN </label>
+    </div>
+</div>
+ <div _ngcontent-xxg-c131="" class="col-ng-star-inserted">
+            <div _ngcontent-xxg-c131="" class="cars-item">
+                <label _ngcontent-xxg-c131="" class="ng-star-inserted">13 ₹ / Km</label>
+                <!----><!----><img _ngcontent-xxg-c131="" src="https://images.ctfassets.net/509kpi6dw56l/7s8MKkYx4bSfPYlrqUEAW5/c23e3f9a5f9ebbbca681d63f0e8b8130/lux-1.png?h=250" class="img-ng-star-inserted"><!----><!---->
+                <label _ngcontent-xxg-c131="">ETIOS</label>
+            </div>
+        </div>
+ <div _ngcontent-xxg-c131="" class="col-ng-star-inserted">
+                    <div _ngcontent-xxg-c131="" class="cars-item">
+                        <label _ngcontent-xxg-c131="" class="ng-star-inserted">18 ₹ / Km</label>
+                        <!----><!----><img _ngcontent-xxg-c131="" src="https://images.ctfassets.net/509kpi6dw56l/ZV8ALWfK2zWiQLJ2gep4N/010ed551e2211627602d6d6e3f1f4364/lux-1__2_.png?h=250" class="img-ng-star-inserted"><!----><!---->
+                        <label _ngcontent-xxg-c131="">SUV</label>
+                    </div>
+                </div>
+ <div _ngcontent-xxg-c131="" class="col-ng-star-inserted">
+    <div _ngcontent-xxg-c131="" class="cars-item"><label _ngcontent-xxg-c131="" class="ng-star-inserted">19 ₹ / Km</label>
+        <!----><!----><img _ngcontent-xxg-c131="" src="https://images.ctfassets.net/509kpi6dw56l/72yoz2W0gPFPq50SfgPPqU/2c521cd2260cff9246ea2955bc37b707/prime-suv-1.png?h=250" class="img-ng-star-inserted"><!----><!---->
+        <label _ngcontent-xxg-c131="">INNOVA CRYSTA</label>
+    </div>
+</div><!---->
+</div>
+</fieldset>
+<input type="submit" value="Get Estimation" />
+</form>
+</div>
+    
+</body>
+</html>
